@@ -1,9 +1,7 @@
 {
     "login": {
         "nome": "admin",
-        "senha": "admin",
-        "usuario":"",
-        "token":""
+        "senha": "admin"
     },
 
     "montadoras": [
