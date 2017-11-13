@@ -12,13 +12,14 @@ import { LoginService } from '../../services/login.service';
 })
 export class LoginComponent implements OnInit {
   usuario: UsuarioModel = new UsuarioModel();
-  usuarioValido: UsuarioModel;
+  usuarioValido:UsuarioModel;
 
   public sucess: boolean;
   public error: boolean;
   constructor(public loginService: LoginService, public router: Router) { }
 
   ngOnInit() {
+    
     this.loginService.login()
     .subscribe(login => this.usuarioValido = login)
     console.log(`${this.usuarioValido}`)
@@ -30,7 +31,7 @@ export class LoginComponent implements OnInit {
       if(this.usuario.nome == '' || this.usuario.senha == ''){
         alert("Os campos desse formulario sao obrigatórios")
       }
-      if(this.usuario !== this.usuarioValido){
+      if(this.usuario.senha !== this.usuarioValido.senha){
         alert(`usuario ou senha inválidos`)
       }else {
         this.router.navigate(['/home']); 
