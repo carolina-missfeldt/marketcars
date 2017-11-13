@@ -1,0 +1,17 @@
+<app-logo>
+</app-logo>
+<h1 class="title">{{title}}</h1>
+<div class="menu-home">
+    <a [routerLink]="['/lista-de-veiculos']" class="nav menu-listagem">
+      <i class="fa fa-list-alt" aria-hidden="true"></i>
+      <p>Veículos</p>  
+    </a>
+    <a [routerLink]="['/cadastro-de-veiculo']" class="nav menu-cadastro">
+      <i class="fa fa-car" aria-hidden="true"></i>
+      <p>Novo veículo</p>  
+    </a>
+    <a [routerLink]="['/']" class="nav menu-sair">
+      <i class="fa fa-sign-out" aria-hidden="true"></i>
+      <p>Logout</p>  
+    </a>
+</div>

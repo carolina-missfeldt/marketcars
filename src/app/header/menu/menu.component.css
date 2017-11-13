@@ -1,0 +1,8 @@
+.ui-menu,
+.ui-menu .ui-menu-child,
+.ui-widget-content,
+#menu {
+    background-image: none !important;
+    background: #fff !important;
+    border: none !important;
+}

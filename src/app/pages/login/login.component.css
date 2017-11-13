@@ -1,0 +1,16 @@
+.login {
+    padding: 1em;
+}
+input {
+    width: 100%;
+    padding: 0.3em !important;
+    
+}
+
+.ui-inputgroup {
+    margin-bottom: 1em;
+}
+
+#entrar {
+    padding: 0.1em !important;
+}

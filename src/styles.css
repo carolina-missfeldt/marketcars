@@ -1,0 +1,84 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: rgb(34, 34, 34);    
+}
+body {
+    background-image: url('./assets/img/background.png'); 
+}
+
+.container {
+    padding: 1em;
+}
+
+.title {
+    padding: 0.5em;
+    background: #f4f4f4;
+    text-align: center !important;
+    font-size: 40px;
+    font-weight: 500;
+    color: #0081BD;
+}
+
+.buttons {
+    text-align: center;
+    padding-top: 20px;
+}
+
+.buttons button {
+    padding: 0.3em 1em;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.buttons button:focus, .buttons button:active {
+    outline: none;
+}
+
+.salvar {
+    background-color: #0081bd;
+}
+
+.cancelar {
+    background-color: #d9534f;
+}
+
+/*formularios*/
+#formulario-de-cadastro {
+    /* width: 60%; */
+    padding: 4em 1.5em 2em 1.5em;
+    margin: 3em auto 0 auto;
+    border-radius: 5px;
+    background-color: #fff;
+}
+input, select {
+    width: 100% !important;
+    padding: 0.3em 0 0 0;
+    font-size: 16px;
+    border: none;
+    background-color: transparent;
+    border-bottom: 1px solid #f4f4f4;
+}
+
+
+h3{
+    font-size: 18px;
+    font-weight: 600;
+}
+
+div {
+    margin-bottom: 20px;
+}
+
+.input:-webkit-autofill, 
+.textarea:-webkit-autofill, 
+.select:-webkit-autofill {
+    background-color: none !important;
+}
+
+.font-size {
+    font-size: 16px !important;
+}

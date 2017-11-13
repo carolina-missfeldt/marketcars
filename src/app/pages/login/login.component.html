@@ -1,0 +1,24 @@
+<app-logo></app-logo>
+<div class="ui-g ui-fluid">
+    <div class="ui-lg-4 ui-md-2"></div>
+    <div class="ui-lg-4 ui-md-8 ui-sm-12">
+        <p-panel header="Login">
+
+            <form action="#" class="login">
+                <div class="ui-inputgroup">
+                    <span class="ui-inputgroup-addon"><i class="fa fa-user"></i></span>
+                    <input type="text" pInputText placeholder="Usuário" [(ngModel)]='usuario.nome' name="nome">
+                </div>
+                <div class="ui-inputgroup">
+                    <span class="ui-inputgroup-addon"><i class="fa fa-key" ></i></span>
+                    <input type="password" pInputText placeholder="Senha" [(ngModel)]='usuario.senha' name="senha">
+                </div>
+                <button pButton type="button" id="entrar" (click)="entrar()" label="Login"></button>
+            </form>
+            <div *ngIf="error">
+                Usuario e senha nao conferem.
+            </div>
+        </p-panel>
+    </div>
+    <div class="ui-lg-4 ui-md-2"></div>
+</div>
