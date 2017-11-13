@@ -21,8 +21,9 @@ export class LoginComponent implements OnInit {
   ngOnInit() {
     
     this.loginService.login()
-    .subscribe(login => this.usuarioValido = login)
-    console.log(`${this.usuarioValido}`)
+    .subscribe(login => 
+      setTimeout(() =>{ this.usuarioValido = login }, 4000))
+      console.log(`${this.usuarioValido}`);
   }
 
 
