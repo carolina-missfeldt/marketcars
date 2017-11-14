@@ -1,8 +1,8 @@
 <app-menu></app-menu>
 <app-logo></app-logo>
 <h1 class="title">{{title}}</h1>
-<div class="ui-g">
-    <div class="ui-g-12 ui-md-12 ui-lg-4" *ngFor="let carro of listaDeCarros">
+<div class="ui-g" class="lista-de-carros">
+    <div class="ui-g-12 ui-sm-12 ui-md-6 ui-lg-4 ui-xl-4" style="margin-bottom:0; heigth: auto" *ngFor="let carro of listaDeCarros">
         <app-carro [carro]="carro"></app-carro>
     </div>
 </div>

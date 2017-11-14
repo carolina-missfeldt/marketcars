@@ -8,7 +8,7 @@ import { Router, ActivatedRoute } from '@angular/router';
   selector: 'app-editar',
   templateUrl: './editar.component.html'
 })
-export class EditarComponent implements OnInit {
+export class EditarComponent  {
 
   listaDeMontadoras: Array<any>;
   title: string = 'Editar carro';
@@ -21,20 +21,20 @@ export class EditarComponent implements OnInit {
    
   }
 
-  ngOnInit() {
-    this.router.params.subscribe(params => {
-      this.idEditar = +params['id'];
-    });
+  // ngOnInit() {
+  //   this.router.params.subscribe(params => {
+  //     this.idEditar = +params['id'];
+  //   });
 
-    for (let k in this.carroAtual) {
-      if (this.carroAtual[k].id == this.idEditar) {
-        this.carroEditado = this.carroAtual[k]
+  //   for (let k in this.carroAtual) {
+  //     if (this.carroAtual[k].id == this.idEditar) {
+  //       this.carroEditado = this.carroAtual[k]
 
-      }
-    }
+  //     }
+  //   }
 
-  }
-  salvarEdicao() {
+  // }
+  // salvarEdicao() {
     
-  }
+  // }
 }

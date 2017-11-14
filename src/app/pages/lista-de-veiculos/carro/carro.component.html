@@ -1,4 +1,4 @@
-<div  style="overflow: hidden" id="topo">
+<div  style="overflow: hidden" id="caroo">
     <div class="box-carro">
         <div class="box-img">
             <img src="{{ carro.imagem }}" alt="{{ carro.nome }}">
@@ -18,11 +18,10 @@
             </div>
             <div class="ui-g-12 ui-md-6 ui-lg-4">
                 <h3>Único dono?</h3>
-                <span *ngIf="carro.unicoDono">Sim</span>
-                <span *ngIf="!carro.unicoDono">Não</span>
+                <p *ngIf="carro.unicoDono">Sim</p>
+                <p *ngIf="!carro.unicoDono">Não</p>
             </div>
         </div>
-        <p-confirmDialog header="Confirmation" icon="fa fa-question-circle" width="425"></p-confirmDialog>
         <div class="buttons">
             <button name="editar" class="salvar" [routerLink]="['/editar',carro.id]">Editar</button>
             <button name="deletar" class="cancelar" (click)="confirm(carro)">Deletar</button>

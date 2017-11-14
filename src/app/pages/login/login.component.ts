@@ -15,6 +15,7 @@ export class LoginComponent implements OnInit {
 
   public sucess: boolean;
   public error: boolean;
+  public campoVazio: boolean;
   constructor(public loginService: LoginService, public router: Router) { }
 
   ngOnInit() {
@@ -29,8 +30,8 @@ export class LoginComponent implements OnInit {
 
   entrar() {
       
-      if(this.usuario.nome == '' || this.usuario.senha == ''){
-        this.error = true;
+      if(this.usuario.nome == null || this.usuario.senha == null){
+        this.campoVazio = true;
       }
       if(this.usuario.senha !== this.usuarioValido.senha || this.usuario.nome !== this.usuarioValido.nome){
         this.error = true;

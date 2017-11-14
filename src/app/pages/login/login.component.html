@@ -6,17 +6,18 @@
 
             <form action="#" class="login">
                 <div class="ui-inputgroup">
-                    <span class="ui-inputgroup-addon"><i class="fa fa-user"></i></span>
-                    <input  type="text" pInputText placeholder="Usuário" [(ngModel)]='usuario.nome' name="nome">
+                    <input  type="text" pInputText placeholder="Usuário" [(ngModel)]='usuario.nome' name="nome" required="required">
                 </div>
                 <div class="ui-inputgroup">
-                    <span class="ui-inputgroup-addon"><i class="fa fa-key" ></i></span>
-                    <input  type="password" pInputText placeholder="Senha" [(ngModel)]='usuario.senha' name="senha">
+                    <input  type="password" pInputText placeholder="Senha" [(ngModel)]='usuario.senha' name="senha" required="required">
                 </div>
                 <button pButton type="button" id="entrar" (click)="entrar(this.usuario)" label="Login"></button>
             </form>
             <div *ngIf="error" class="msg-erro">
                 Usuario e senha nao conferem.
+            </div>
+            <div *ngIf="campoVazio" class="msg-erro">
+                Os campos não podem ficar em branco.
             </div>
         </p-panel>
     </div>
