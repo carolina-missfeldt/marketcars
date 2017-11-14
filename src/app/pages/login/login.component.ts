@@ -23,7 +23,7 @@ export class LoginComponent implements OnInit {
     this.loginService.login()
     .subscribe(login => 
       setTimeout(() =>{ this.usuarioValido = login }, 4000))
-      console.log(`${this.usuarioValido}`);
+      // console.log(`${this.usuarioValido}`);
   }
 
 
@@ -37,8 +37,8 @@ export class LoginComponent implements OnInit {
         this.error = true;
       }else {
         this.router.navigate(['/home']);
-        console.log(this.usuario) 
-        console.log(this.usuarioValido);
+        // console.log(this.usuario) 
+        // console.log(this.usuarioValido);
       }
 
   

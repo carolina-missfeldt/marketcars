@@ -20,7 +20,7 @@ export class EditarComponent implements OnInit {
   carroAtual: Array<any>;
 
   constructor(public listagemService: ListagemService, public cadastroService: CadastroService, public router: ActivatedRoute, public rota: Router) {
-    this.carroAtual = listagemService.listaDeCarros;
+   
   }
 
   ngOnInit() {

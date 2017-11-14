@@ -1,8 +1,8 @@
 <app-menu></app-menu>
 <app-logo></app-logo>
 <h1 class="title">{{title}}</h1>
-<div class="ui-g" *ngIf="listagemService.listaDeCarros.length > 0 ">
-    <div class="ui-g-12 ui-md-6 ui-lg-4" *ngFor="let carro of listagemService.listaDeCarros">
+<div class="ui-g">
+    <div class="ui-g-12 ui-md-6 ui-lg-4" *ngFor="let carro of listaDeCarros">
         <app-carro [carro]="carro"></app-carro>
     </div>
 </div>

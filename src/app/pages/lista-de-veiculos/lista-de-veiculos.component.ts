@@ -13,19 +13,20 @@ import { CadastroService } from '../../services/cadastro.service';
 export class ListaDeVeiculosComponent implements OnInit {
 
   title: string = 'Veículos disponíveis';
-  response: Array<any> = [];
+  listaDeCarros: CarroModel[];
   // editar: boolean = false;
-  
 
   constructor(public listagemService: ListagemService, public cadastroService: CadastroService) { }
 
   ngOnInit() {
     this.montaLista();
-    // console.log(this.listaDeCarros);
+    console.log(this.listaDeCarros);
   }
 
   montaLista() {
-      
+    this.listagemService.getVeiculos()
+    .subscribe(veiculos => this.listaDeCarros = veiculos);
+    console.log(`${this.listaDeCarros}`);
   }
 
 

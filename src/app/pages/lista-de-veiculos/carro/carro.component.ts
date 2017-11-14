@@ -24,14 +24,34 @@ export class CarroComponent implements OnInit {
     }
     return valores;
   }
+
+  listaDeImagens: Array<any> = [
+    'http://bit.ly/2luj8Kn',
+    'http://bit.ly/2xyPm8U',
+    'http://bit.ly/2gXi54x',
+    'http://bit.ly/2zj2GCY',
+    'http://bit.ly/2yWWQGS',
+    'http://bit.ly/2A0JkQ2',
+    'http://bit.ly/2yYJ5Fb',
+    'http://bit.ly/2xAy1g9'
+  ];
+
+  img: string;
+  randomImg: any;
+
   constructor(public listagemService: ListagemService) { }
 
   ngOnInit() {
+    this.randomCar();
+    this.carro.imagem = this.img;
   }
 
   confirm() {
 }
-
+randomCar() {
+  this.randomImg = Math.floor(Math.random() * this.listaDeImagens.length);
+  this.img = this.listaDeImagens[this.randomImg];
+}
 
 
 }

@@ -2,19 +2,19 @@
     <div class="box-carro">
         <div class="box-img">
             <img src="{{ carro.imagem }}" alt="{{ carro.nome }}">
-            <span class="condicao-do-carro" [ngClass]="cores()">{{ carro.condicao }}</span>
-            <span class="preco-do-carro">{{ carro.preco | currency:'BRL':true }}</span>
+            <span class="condicao-do-carro" [ngClass]="cores()">{{ carro?.condicao }}</span>
+            <span class="preco-do-carro">{{ carro?.preco | currency:'BRL':true }}</span>
         </div>
  
-        <h2 class="nome-do-carro">{{ carro.nome | uppercase}}</h2>
+        <h2 class="nome-do-carro">{{ carro?.nome | uppercase}}</h2>
         <div class="ui-g">
             <div class="ui-g-12 ui-md-6 ui-lg-4">
                 <h3>Ano de fabricação</h3>
-                <p>{{carro.anoFabricacao }}</p>
+                <p>{{carro?.anoFabricacao }}</p>
             </div>
             <div class="ui-g-12 ui-md-6 ui-lg-4">
                 <h3>Fabricante</h3>
-                <p>{{carro.montadora.nome}}</p>
+                <p>{{carro?.montadora.nome}}</p>
             </div>
             <div class="ui-g-12 ui-md-6 ui-lg-4">
                 <h3>Único dono?</h3>

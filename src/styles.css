@@ -21,6 +21,15 @@ body {
     color: #0081BD;
 }
 
+.msg-erro {
+    margin: 0 !important;
+    text-align: center !important;
+}
+
+.input-erro {
+    border-color: red !important;
+}
+
 .buttons {
     text-align: center;
     padding-top: 20px;

@@ -78,7 +78,7 @@
             "preco": 5500,
             "anoFabricacao": "1994",
             "dataCadastro": "09/09/2001",
-            "condicao": "Usado",
+            "condicao": "SemiNovo",
             "montadora": {
                 "id": 126,
                 "nome": "Fiat"
@@ -93,7 +93,7 @@
             "preco": 5500,
             "anoFabricacao": "1994",
             "dataCadastro": "09/09/2001",
-            "condicao": "Usado",
+            "condicao": "Novo",
             "montadora": {
                 "id": 126,
                 "nome": "Fiat"

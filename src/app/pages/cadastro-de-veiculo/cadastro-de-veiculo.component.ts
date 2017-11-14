@@ -14,7 +14,7 @@ import { ListagemService } from '../../services/listagem.service';
 export class CadastroDeVeiculoComponent implements OnInit {
   lastIdLista: Array<any>;
   title: string = 'Cadastre seu veículo';
-  public novoCarro: CarroModel = new CarroModel({});
+  // public novoCarro: CarroModel = new CarroModel({});
   listaDeMontadoras: Array<any>;
   errorMessage: String;
   carroNome: String;
@@ -60,9 +60,11 @@ export class CadastroDeVeiculoComponent implements OnInit {
 
   }
 
+
   randomCar() {
     this.randomImg = Math.floor(Math.random() * this.listaDeImagens.length);
     this.img = this.listaDeImagens[this.randomImg];
   }
+
 
 }
