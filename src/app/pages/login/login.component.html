@@ -13,7 +13,7 @@
                     <span class="ui-inputgroup-addon"><i class="fa fa-key" ></i></span>
                     <input type="password" pInputText placeholder="Senha" [(ngModel)]='usuario.senha' name="senha">
                 </div>
-                <button pButton type="button" id="entrar" (click)="entrar()" label="Login"></button>
+                <button pButton type="button" id="entrar" (click)="entrar(this.usuario)" label="Login"></button>
             </form>
             <div *ngIf="error">
                 Usuario e senha nao conferem.

@@ -57,17 +57,63 @@
     "veiculos":[
         {
             "id": 1,
+            "imagem": "",
+            "nome": "Uno",
             "unicoDono": true,
             "preco": 5500,
-            "anoFabricacao": "02/02/1994",
+            "anoFabricacao": "1994",
             "dataCadastro": "09/09/2001",
             "condicao": "Usado",
             "montadora": {
                 "id": 126,
                 "nome": "Fiat"
-            },
-            "imagem": "https://scontent-sea1-1.cdninstagram.com/t51.2885-15/s320x320/e35/12905217_555832721246257_1155022746_n.jpg?ig_cache_key=MTIxODkxMzYzMzY2OTc0NTM2Mg%3D%3D.2",
-            "nome": "Uno com Escada"
+            }
+
+        },
+        {
+            "id": 2,
+            "imagem": "",
+            "nome": "Fusca",
+            "unicoDono": true,
+            "preco": 5500,
+            "anoFabricacao": "1994",
+            "dataCadastro": "09/09/2001",
+            "condicao": "Usado",
+            "montadora": {
+                "id": 126,
+                "nome": "Fiat"
+            }
+
+        },
+        {
+            "id": 3,
+            "imagem": "",
+            "nome": "Gol",
+            "unicoDono": true,
+            "preco": 5500,
+            "anoFabricacao": "1994",
+            "dataCadastro": "09/09/2001",
+            "condicao": "Usado",
+            "montadora": {
+                "id": 126,
+                "nome": "Fiat"
+            }
+
+        },
+        {
+            "id": 4,
+            "imagem": "",
+            "nome": "Palio",
+            "unicoDono": true,
+            "preco": 5500,
+            "anoFabricacao": "1994",
+            "dataCadastro": "09/09/2001",
+            "condicao": "Usado",
+            "montadora": {
+                "id": 126,
+                "nome": "Fiat"
+            }
+            
         }
     ]
 

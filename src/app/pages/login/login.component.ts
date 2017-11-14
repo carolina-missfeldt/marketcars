@@ -29,13 +29,16 @@ export class LoginComponent implements OnInit {
 
 
   entrar() {
+      
       if(this.usuario.nome == '' || this.usuario.senha == ''){
-        alert("Os campos desse formulario sao obrigatórios")
+        this.error = true;
       }
-      if(this.usuario.senha !== this.usuarioValido.senha){
-        alert(`usuario ou senha inválidos`)
+      if(this.usuario.senha !== this.usuarioValido.senha || this.usuario.nome !== this.usuarioValido.nome){
+        this.error = true;
       }else {
-        this.router.navigate(['/home']); 
+        this.router.navigate(['/home']);
+        console.log(this.usuario) 
+        console.log(this.usuarioValido);
       }
 
   
