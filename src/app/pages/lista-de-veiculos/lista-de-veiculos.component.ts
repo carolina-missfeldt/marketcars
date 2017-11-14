@@ -7,8 +7,7 @@ import { CadastroService } from '../../services/cadastro.service';
 
 @Component({
   selector: 'app-lista-de-veiculos',
-  templateUrl: './lista-de-veiculos.component.html',
-  styleUrls: ['./lista-de-veiculos.component.css']
+  templateUrl: './lista-de-veiculos.component.html'
 })
 export class ListaDeVeiculosComponent implements OnInit {
 

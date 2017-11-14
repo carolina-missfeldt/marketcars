@@ -3,7 +3,6 @@ import { Http, Response } from '@angular/http';
 import { Headers, RequestOptions } from '@angular/http';
 import { Observable } from 'rxjs';
 import { LoginService } from './login.service';
-import { MontadorasModel } from '../models/montadoras-model';
 import { CarroModel } from '../models/carro-model';
 import { URL_API } from './../app.api';
 import { ErrorMsg } from '../app.error';

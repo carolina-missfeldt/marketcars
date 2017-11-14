@@ -1,4 +1,3 @@
-import { MontadorasModel } from './montadoras-model';
 export interface CarroModel {
         id: number;
         unicoDono: boolean;
@@ -8,7 +7,7 @@ export interface CarroModel {
         condicao: string;
         imagem: string;
         nome: string;
-        montadora: MontadorasModel;
+        montadora: Object;
 
 
 }

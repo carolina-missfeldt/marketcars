@@ -1,14 +1,12 @@
 import { CadastroService } from './../../../services/cadastro.service';
 import { Component, OnInit, Input } from '@angular/core';
 import { CarroModel } from '../../../models/carro-model';
-import { MontadorasModel } from '../../../models/montadoras-model';
 import { ListagemService } from '../../../services/listagem.service';
 import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-editar',
-  templateUrl: './editar.component.html',
-  styleUrls: ['./editar.component.css']
+  templateUrl: './editar.component.html'
 })
 export class EditarComponent implements OnInit {
 
@@ -24,7 +22,6 @@ export class EditarComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.selectMontadoras();
     this.router.params.subscribe(params => {
       this.idEditar = +params['id'];
     });
@@ -37,16 +34,6 @@ export class EditarComponent implements OnInit {
     }
 
   }
-
-  selectMontadoras() {
-    this.cadastroService.getMontadoras()
-      .subscribe(dados => {
-        this.listaDeMontadoras = dados.json()
-      }, error => {
-        alert('Não foi possível carregar a lista');
-      })
-  }
-
   salvarEdicao() {
     
   }

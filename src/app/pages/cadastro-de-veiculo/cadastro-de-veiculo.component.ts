@@ -2,15 +2,13 @@ import { Observable } from 'rxjs/Observable';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators, FormControl } from '@angular/forms';
 import { CarroModel } from './../../models/carro-model';
-import { MontadorasModel } from '../../models/montadoras-model';
 import { CadastroService } from '../../services/cadastro.service';
 import { ListagemService } from '../../services/listagem.service';
 
 
 @Component({
   selector: 'app-cadastro-de-veiculo',
-  templateUrl: './cadastro-de-veiculo.component.html',
-  styleUrls: ['./cadastro-de-veiculo.component.css']
+  templateUrl: './cadastro-de-veiculo.component.html'
 })
 export class CadastroDeVeiculoComponent implements OnInit {
   lastIdLista: Array<any>;

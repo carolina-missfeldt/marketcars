@@ -11,8 +11,7 @@ import { ListagemService } from '../../../services/listagem.service';
 
 @Component({
   selector: 'app-carro',
-  templateUrl: './carro.component.html',
-  styleUrls: ['./carro.component.css']
+  templateUrl: './carro.component.html'
 })
 export class CarroComponent implements OnInit {
   @Input() carro: CarroModel;

@@ -4,8 +4,12 @@ import { MenuItem } from 'primeng/primeng';
 
 @Component({
   selector: 'app-menu',
-  templateUrl: './menu.component.html',
-  styleUrls: ['./menu.component.css']
+  template: `
+    <p-sidebar [(visible)]="display" position="right">
+         <p-slideMenu  [model]="items"  [style]="estilos()"></p-slideMenu>
+    </p-sidebar>
+    <button pButton type="button" (click)="display = true" icon="fa fa-bars" position="right" style="position: fixed; right: 0"></button>
+  `
 })
 export class MenuComponent implements OnInit {
 
