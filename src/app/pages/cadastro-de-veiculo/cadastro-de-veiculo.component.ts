@@ -1,3 +1,4 @@
+import { Observable } from 'rxjs/Observable';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators, FormControl } from '@angular/forms';
 import { CarroModel } from './../../models/carro-model';
@@ -32,12 +33,11 @@ export class CadastroDeVeiculoComponent implements OnInit {
   ];
   img: string;
   randomImg: any;
-
+  montadoras: Observable<any>
   constructor(public cadastroService: CadastroService, public listagemService: ListagemService) { }
 
   ngOnInit() {
-    this.resetNovoCarro();
-    this.selectMontadoras();
+    this.montadoras = this.cadastroService.getMontadoras();
 
   }
 

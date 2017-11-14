@@ -5,26 +5,22 @@ import { Observable } from 'rxjs';
 import { LoginService } from './login.service';
 import { MontadorasModel } from '../models/montadoras-model';
 import { CarroModel } from '../models/carro-model';
+import { URL_API } from './../app.api';
+import { ErrorMsg } from '../app.error';
 
 
 @Injectable()
 export class CadastroService {
 
 
-  private URL_MONTADORAS: string = "http://localhost:8080/marketcars/montadoras";
-  private URL_NOVO: string = 'http://localhost:8080/marketcars/veiculos/novo';
-  public listaDeMontadoras: MontadorasModel = new MontadorasModel();
-  
-
   constructor(private http: Http, public loginService: LoginService) { }
 
   
 
-  getMontadoras(): Observable<Response> {
-    let headers = new Headers();
-    headers.append('Content-Type', 'application/json');
-    let options = new RequestOptions({ headers: headers });
-    return this.http.get(this.URL_MONTADORAS, options)
+  getMontadoras(): Observable<any> {
+    return this.http.get(`${URL_API}/montadoras`)
+    .map(response => response.json())
+    .catch(ErrorMsg.handleError)
   }
 
   cadastrar()  {

@@ -6,7 +6,7 @@
     <form id="formulario-de-cadastro" class="ui-sm-12 ui-md-6 ui-lg-6" >
         <div id="condicao">
             <h3>Condição do carro</h3>
-            <select name="condicaoCarro" required="required" [(ngModel)]="novoCarro.condicao"  [ngModelOptions]="{standalone: true}">
+            <select name="condicaoCarro" required="required">
                 <option  value="Novo" selected="selected">Novo</option>
                 <option  value="SemiNovo" >Semi-novo</option>
                 <option  value="Usado">Usado</option>
@@ -14,28 +14,27 @@
         </div>
         <div id="nome-do-carro">
             <h3>Nome do carro</h3>
-            <input type="text" name="carro" [(ngModel)]="novoCarro.nome" placeholder="Fusca" required 
-            #nome="ngModel">
+            <input type="text" name="carro"  placeholder="Fusca" required >
         </div>
         <div id="preco">
             <h3>Valor de venda</h3>
-            <input type="text" name="preco" [(ngModel)]="novoCarro.preco" preco [valorDigitado]="" >
+            <input type="text" name="preco"  >
         </div>
         <div id="fabricante">
             <h3>Fabricante</h3>
-            <select name="fabricante" [(ngModel)]="novoCarro.montadora" required>
-                <option *ngFor="let montadora of listaDeMontadoras" [ngValue]="montadora">{{ montadora.nome }}</option>
+            <select name="fabricante" required>
+                <option *ngFor="let montadora of montadoras | async" [ngValue]="montadora">{{ montadora.nome }}</option>
             </select>
         </div>
         <div id="ano-de-fabricacao">
             <h3>Ano de fabricação</h3>
-            <input type="text" [(ngModel)]="novoCarro.anoFabricacao" name="ano" #ano="ngModel"
-             placeholder="1990" required dataConvert [ano]="undefined" maxlength="4">
+            <input type="text"  name="ano"
+             placeholder="1990" required dataConvert  maxlength="4">
         </div>
         <div id="dono">
             <h3>Unico dono?</h3>
-            <p-radioButton name="unicoDono" value="true" label="Sim" [(ngModel)]="novoCarro.unicoDono"></p-radioButton>
-            <p-radioButton name="unicoDono" value="false" label="Não" [(ngModel)]="novoCarro.unicoDono"></p-radioButton>
+            <p-radioButton name="unicoDono" value="true" label="Sim" ></p-radioButton>
+            <p-radioButton name="unicoDono" value="false" label="Não"></p-radioButton>
         </div>
         <!-- <div id="img">
             <input type="file" [(ngModel)]="novoCarro.imagem" name="imagem-carro">
