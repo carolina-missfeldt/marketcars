@@ -11,6 +11,35 @@ body {
     background-image: url('./assets/img/background.png'); 
 }
 
+/*home*/
+.menu-home{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content:center;
+}
+
+.nav{
+    width: 250px;;
+    height: 120px;
+    background-color:#0081BD;
+    color:white;
+    padding:10px;
+    text-align:center;
+    margin:40px 10px 0px 0px;
+}
+a{
+    text-decoration: none;
+}
+
+a:hover{
+    background-color: #0178A3;
+    cursor:pointer;
+}
+
+.nav > i{
+    margin-top: 15px;
+    font-size:50px;
+}
 
 .title {
     padding: 0.5em;
@@ -21,13 +50,17 @@ body {
     color: #0081BD;
 }
 
+.home .title {
+    color: #ff9d00;
+}
+
 .logo {
     max-width: 350px;
     margin: 2em auto 1em auto;
     text-align: center;
 }
 .logo img {
-    width: 100%;
+    width: 80%;
     
 }
 
