@@ -168,21 +168,25 @@ form > div {
 }
 
 h2 {
-    font-size: 120%;
+    font-size: 110%;
     font-weight: 400;
     background-color: #f4f4f4;
 }
 
 h3{
-    font-size: 110%;
+    font-size: 100%;
     font-weight: 400;
     display: inline-block;
 }
 
 p, span {
-    font-size: 100% !important;
-    font-weight: 200 !important;
+    font-size: 100% ;
+    font-weight: 200;
    
+}
+
+.atributos > div {
+    padding: 2em 0;
 }
 
 .condicao-do-carro, .preco-do-carro {
@@ -212,6 +216,16 @@ p, span {
 
 #carro {
     margin-bottom: 0 !important;
+}
+
+.footer {
+    width: 100%;
+    background-color: rgb(244, 244, 244);
+    font-size: 12px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    padding: 0.5em;
 }
 
 @media screen and (max-width: 700px) {

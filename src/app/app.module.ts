@@ -30,6 +30,7 @@ import { ListagemService } from './services/listagem.service';
 import { CadastroService } from './services/cadastro.service';
 import { DataDirective } from './diretivas/data.directive';
 import { MoedaDirective } from './diretivas/moeda.directive';
+import { FooterComponent } from './footer/footer.component';
 
 
 
@@ -46,7 +47,8 @@ import { MoedaDirective } from './diretivas/moeda.directive';
     CarroComponent,
     EditarComponent,
     DataDirective,
-    MoedaDirective
+    MoedaDirective,
+    FooterComponent
 
   ],
   imports: [
