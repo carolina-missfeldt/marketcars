@@ -24,7 +24,7 @@ export class ListaDeVeiculosComponent implements OnInit {
 
   montaLista() {
     this.listagemService.getVeiculos()
-    .subscribe(veiculos => this.listaDeCarros = veiculos);
+    .subscribe(veiculos => this.listaDeCarros = veiculos),
     console.log(`${this.listaDeCarros}`);
   }
 

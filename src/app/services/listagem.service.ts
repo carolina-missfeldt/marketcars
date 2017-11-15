@@ -15,7 +15,7 @@ export class ListagemService {
   idAtual: number;
   id: number;
   edicaoConfirm: any = {}
-
+  listaDeCarros: CarroModel[];
   constructor(private http: Http) { }
 
   getVeiculos(): Observable <CarroModel[]> {
@@ -24,8 +24,8 @@ export class ListagemService {
     .catch(ErrorMsg.handleError)
   }
 
-  deletVeiculo()  {
-
+  deletVeiculo(): Observable<Response> {
+    return this.http.delete(`${URL_API}/veiculos/${this.idAtual}`)
   }
 
   editVeiculo(){

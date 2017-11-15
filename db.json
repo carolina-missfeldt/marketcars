@@ -73,32 +73,18 @@
       }
     },
     {
-      "id": 2,
-      "imagem": "http://bit.ly/2yYJ5Fb",
-      "nome": "Fusca",
-      "unicoDono": true,
-      "preco": 5500,
-      "anoFabricacao": "1994",
-      "dataCadastro": "09/09/2001",
-      "condicao": "SemiNovo",
       "montadora": {
-        "id": 126,
-        "nome": "Fiat"
-      }
-    },
-    {
-      "montadora": {
-        "id": 126,
-        "nome": "Fiat"
+        "id": 1264,
+        "nome": "Volkswagen"
       },
       "anoFabricacao": "2000",
       "condicao": "SemiNovo",
-      "dataCadastro": "2017-11-15T18:14:34.184Z",
-      "id": 3,
-      "imagem": "http://bit.ly/2gXi54x",
-      "nome": "Eurovan",
-      "preco": "50000.000",
-      "unicoDono": "sim"
+      "dataCadastro": "2017-11-15T18:56:50.220Z",
+      "id": 2,
+      "imagem": "http://bit.ly/2yYJ5Fb",
+      "nome": "NSX",
+      "preco": "700000",
+      "unicoDono": "não"
     }
   ]
 }

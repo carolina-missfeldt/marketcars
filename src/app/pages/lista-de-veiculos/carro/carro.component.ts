@@ -24,16 +24,19 @@ export class CarroComponent implements OnInit {
     return valores;
   }
 
-
+  listaDeCarros: CarroModel[];
   constructor(public listagemService: ListagemService) { }
 
   ngOnInit() {
    
   }
 
-  confirm() {
-}
-
-
+  apagarCarro(carro) {
+    this.listagemService.idAtual = this.carro.id;
+    alert(`Você irá excluir o ítem ' + ${this.carro.id}, nome:  ${this.carro.nome}`)
+    this.listagemService.deletVeiculo()
+      .subscribe(veiculos => this.listagemService.getVeiculos()),
+      window.location.reload();
+    }
 
 }
