@@ -4,6 +4,8 @@ import { FormBuilder, Validators, FormControl } from '@angular/forms';
 import { CarroModel } from './../../models/carro-model';
 import { CadastroService } from '../../services/cadastro.service';
 import { ListagemService } from '../../services/listagem.service';
+import { ErrorMsg } from '../../app.error';
+ 
 
 
 @Component({
@@ -14,8 +16,7 @@ export class CadastroDeVeiculoComponent implements OnInit {
   lastIdLista: Array<any>;
   title: string = 'Cadastre seu veículo';
   // public novoCarro: CarroModel = new CarroModel({});
-  listaDeMontadoras: Array<any>;
-  errorMessage: String;
+  public novoCarro: CarroModel = new CarroModel();
   carroNome: String;
   indice: number;
   dataAtual = new Date();
@@ -35,18 +36,23 @@ export class CadastroDeVeiculoComponent implements OnInit {
   constructor(public cadastroService: CadastroService, public listagemService: ListagemService) { }
 
   ngOnInit() {
+    this.resetNovoCarro();
     this.montadoras = this.cadastroService.getMontadoras();
-
-  }
-
-  selectMontadoras() {
     
+
   }
 
 
-  addCarro() {
-
-
+  addCarro(novoCarro) {
+    this.novoCarro.dataCadastro = this.dataAtual;
+    this.cadastroService.cadastrar(this.novoCarro)
+    .subscribe( response => {
+      alert('cadastro realizado com sucesso');
+      console.log(JSON.stringify(this.novoCarro));
+      this.resetNovoCarro();
+    }, error => {
+      alert(`não foi possível cadastrar ${ErrorMsg}`)
+    });
   }
 
   cancelar() {
@@ -54,11 +60,29 @@ export class CadastroDeVeiculoComponent implements OnInit {
   }
 
   resetNovoCarro() {
+    this.randomCar();
+    this.novoCarro = {
+      montadora: undefined,
+      anoFabricacao: undefined,
+      condicao: undefined,
+      dataCadastro: undefined,
+      id: null,
+      imagem: this.img,
+      nome: undefined,
+      preco: undefined,
+      unicoDono: undefined
+    };
+    this.listagemService.getVeiculos().subscribe(response => {
+      const indiceUltimoCarro = response.length - 1;
+      this.novoCarro.id = response[indiceUltimoCarro].id + 1;
 
+      console.log(`ID do novo carro: ${this.novoCarro.id}`);
+
+    }, error => {
+
+    });
 
   }
-
-
   randomCar() {
     this.randomImg = Math.floor(Math.random() * this.listaDeImagens.length);
     this.img = this.listaDeImagens[this.randomImg];

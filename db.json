@@ -1,120 +1,104 @@
 {
-    "login": {
-        "nome": "admin",
-        "senha": "admin"
+  "login": {
+    "nome": "admin",
+    "senha": "admin"
+  },
+  "montadoras": [
+    {
+      "id": 1123,
+      "nome": "Hyundai"
     },
-
-    "montadoras": [
-        {
-            "id": 1123,
-            "nome": "Hyundai"
-        },
-        {
-            "id": 12,
-            "nome": "Ford"
-        },
-        {
-            "id": 125,
-            "nome": "Mitsubishi"
-        },
-        {
-            "id": 122,
-            "nome": "Mercedes-Benz"
-        },
-        {
-            "id": 126,
-            "nome": "Fiat"
-        },
-        {
-            "id": 127,
-            "nome": "Renault"
-        },
-        {
-            "id": 121,
-            "nome": "Ferrari"
-        },
-        {
-            "id": 1264,
-            "nome": "Volkswagen"
-        },
-        {
-            "id": 1290,
-            "nome": "Honda"
-        },
-        {
-            "id": 1090,
-            "nome": "Citroen"
-        },
-        {
-            "id": 150,
-            "nome": "Nissan"
-        },
-        {
-            "id": 1750,
-            "nome": "Toyota"
-        }
-    ],
-    "veiculos":[
-        {
-            "id": 1,
-            "imagem": "",
-            "nome": "Uno",
-            "unicoDono": true,
-            "preco": 5500,
-            "anoFabricacao": "1994",
-            "dataCadastro": "09/09/2001",
-            "condicao": "Usado",
-            "montadora": {
-                "id": 126,
-                "nome": "Fiat"
-            }
-
-        },
-        {
-            "id": 2,
-            "imagem": "",
-            "nome": "Fusca",
-            "unicoDono": true,
-            "preco": 5500,
-            "anoFabricacao": "1994",
-            "dataCadastro": "09/09/2001",
-            "condicao": "SemiNovo",
-            "montadora": {
-                "id": 126,
-                "nome": "Fiat"
-            }
-
-        },
-        {
-            "id": 3,
-            "imagem": "",
-            "nome": "Gol",
-            "unicoDono": true,
-            "preco": 5500,
-            "anoFabricacao": "1994",
-            "dataCadastro": "09/09/2001",
-            "condicao": "Novo",
-            "montadora": {
-                "id": 126,
-                "nome": "Fiat"
-            }
-
-        },
-        {
-            "id": 4,
-            "imagem": "",
-            "nome": "Palio",
-            "unicoDono": true,
-            "preco": 5500,
-            "anoFabricacao": "1994",
-            "dataCadastro": "09/09/2001",
-            "condicao": "Usado",
-            "montadora": {
-                "id": 126,
-                "nome": "Fiat"
-            }
-            
-        }
-    ]
-
+    {
+      "id": 12,
+      "nome": "Ford"
+    },
+    {
+      "id": 125,
+      "nome": "Mitsubishi"
+    },
+    {
+      "id": 122,
+      "nome": "Mercedes-Benz"
+    },
+    {
+      "id": 126,
+      "nome": "Fiat"
+    },
+    {
+      "id": 127,
+      "nome": "Renault"
+    },
+    {
+      "id": 121,
+      "nome": "Ferrari"
+    },
+    {
+      "id": 1264,
+      "nome": "Volkswagen"
+    },
+    {
+      "id": 1290,
+      "nome": "Honda"
+    },
+    {
+      "id": 1090,
+      "nome": "Citroen"
+    },
+    {
+      "nome": "Nissan 2",
+      "id": 150
+    },
+    {
+      "id": 1750,
+      "nome": "Toyota"
+    },
+    {
+      "id": 666,
+      "nome": "Diablo"
+    }
+  ],
+  "veiculos": [
+    {
+      "id": 1,
+      "imagem": "http://bit.ly/2xAy1g9",
+      "nome": "Uno",
+      "unicoDono": true,
+      "preco": 5500,
+      "anoFabricacao": "1994",
+      "dataCadastro": "09/09/2001",
+      "condicao": "Usado",
+      "montadora": {
+        "id": 126,
+        "nome": "Fiat"
+      }
+    },
+    {
+      "id": 2,
+      "imagem": "http://bit.ly/2yYJ5Fb",
+      "nome": "Fusca",
+      "unicoDono": true,
+      "preco": 5500,
+      "anoFabricacao": "1994",
+      "dataCadastro": "09/09/2001",
+      "condicao": "SemiNovo",
+      "montadora": {
+        "id": 126,
+        "nome": "Fiat"
+      }
+    },
+    {
+      "montadora": {
+        "id": 126,
+        "nome": "Fiat"
+      },
+      "anoFabricacao": "2000",
+      "condicao": "SemiNovo",
+      "dataCadastro": "2017-11-15T18:14:34.184Z",
+      "id": 3,
+      "imagem": "http://bit.ly/2gXi54x",
+      "nome": "Eurovan",
+      "preco": "50000.000",
+      "unicoDono": "sim"
+    }
+  ]
 }

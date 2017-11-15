@@ -22,11 +22,15 @@ export class CadastroService {
     .catch(ErrorMsg.handleError)
   }
 
-  cadastrar()  {
+  cadastrar(novoCarro: CarroModel): Observable<CarroModel>  {
+    var headers = new Headers();
+    headers.append("Content-Type", 'application/json');
 
-
-
-
+    return this.http.post(`${URL_API}/veiculos`, JSON.stringify(novoCarro), {
+      "headers": headers
+    })
+    .map(response => response.json())
+    .catch(ErrorMsg.handleError)
   }
 
 }
