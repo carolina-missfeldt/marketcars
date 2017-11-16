@@ -99,20 +99,6 @@
       "nome": "Charger",
       "preco": "7000.00",
       "unicoDono": "sim"
-    },
-    {
-      "montadora": {
-        "id": 125,
-        "nome": "Mitsubishi"
-      },
-      "anoFabricacao": "2004",
-      "condicao": "Usado",
-      "dataCadastro": "2017-11-16T10:53:40.087Z",
-      "id": 4,
-      "imagem": "http://bit.ly/2A0JkQ2",
-      "nome": "Charger",
-      "preco": "7000.00",
-      "unicoDono": "sim"
     }
   ]
 }

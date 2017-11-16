@@ -28,8 +28,12 @@ export class ListagemService {
     return this.http.delete(`${URL_API}/veiculos/${this.idAtual}`)
   }
 
-  editVeiculo(){
-
+  editVeiculo(carro: CarroModel): Observable<Response>{
+    var headers = new Headers();
+    headers.append("Content-Type", 'application/json');
+    return this.http.put(`${URL_API}/veiculos/editar/${this.idAtual}`,JSON.stringify(carro))
+    .map(response=> response.json())
+    .catch(ErrorMsg.handleError)
   }
 
 

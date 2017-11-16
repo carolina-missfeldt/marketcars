@@ -3,10 +3,10 @@
 <h1 class="title">{{title}}</h1>
 
 <div class="ui-g ui-fluid">
-    <form id="formulario-de-cadastro" class="ui-sm-12 ui-md-6 ui-lg-6" *ngIf="carroEditado">
+    <form id="formulario-de-cadastro" class="ui-sm-12 ui-md-6 ui-lg-6">
         <div id="condicao">
             <h3>Condição do carro</h3>
-            <select name="condicaoCarro" required="required" [(ngModel)]="carroEditado.condicao">
+            <select name="condicaoCarro" required="required" [(ngModel)]="carro.condicao">
                 <option  value="Novo" selected="true">Novo</option>
                 <option  value="SemiNovo" >Semi-novo</option>
                 <option  value="Usado">Usado</option>
@@ -14,27 +14,27 @@
         </div>
         <div id="nome-do-carro">
             <h3>Nome do carro</h3>
-            <input type="text" name="carro"  [(ngModel)]="carroEditado.nome">
+            <input type="text" name="carro"  [(ngModel)]="carro.nome">
         </div>
         <div id="preco">
             <h3>Valor de venda</h3>
-            <input type="text" name="preco" [(ngModel)]="carroEditado.preco" preco [valorDigitado]="undefined">
+            <input type="text" name="preco" [(ngModel)]="carro.preco" preco [valorDigitado]="undefined">
         </div>
         <div id="fabricante">
             <h3>Fabricante</h3>
             <select name="fabricante">
-                <option value="{{carroEditado.montadora.nome}}" selected="true">{{carroEditado.montadora.nome}}</option>
-                <option option *ngFor="let montadora of listaDeMontadoras" [ngValue]="montadora">{{montadora.nome }}</option>
+                <option value="{{carro.montadora.nome}}" selected="true">{{carroEditado.montadora.nome}}</option>
+                <option option *ngFor="let m of montadoras" [ngValue]="m">{{montadora.nome }}</option>
             </select>
         </div>
         <div id="ano-de-fabricacao">
             <h3>Ano de fabricação</h3>
-            <input type="text"  name="ano" [(ngModel)]="carroEditado.anoFabricacao" dataConvert [ano]="undefined" maxlength="4">
+            <input type="text"  name="ano" [(ngModel)]="carro.anoFabricacao" dataConvert [ano]="undefined" maxlength="4">
         </div>
         <div id="dono">
             <h3>Unico dono?</h3>
-            <p-radioButton name="unicoDono" value="true"  [(ngModel)]="carroEditado.unicoDono" required></p-radioButton>
-            <p-radioButton name="unicoDono" value="false" label="Não" [(ngModel)]="carroEditado.unicoDono" required></p-radioButton>
+            <p-radioButton name="unicoDono" value="true"  [(ngModel)]="carro.unicoDono" required></p-radioButton>
+            <p-radioButton name="unicoDono" value="false" label="Não" [(ngModel)]="carro.unicoDono" required></p-radioButton>
         </div>
         <div id="img">
             <!-- <input type="file" [(ngModel)]="novoCarro.imagem" name="imagem-carro"> -->
@@ -46,4 +46,4 @@
         </div>
     </form>
 </div>
-
+{{carro | json}}

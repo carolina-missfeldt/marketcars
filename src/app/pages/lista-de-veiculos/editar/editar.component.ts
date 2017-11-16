@@ -3,38 +3,41 @@ import { Component, OnInit, Input } from '@angular/core';
 import { CarroModel } from '../../../models/carro-model';
 import { ListagemService } from '../../../services/listagem.service';
 import { Router, ActivatedRoute } from '@angular/router';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-editar',
   templateUrl: './editar.component.html'
 })
-export class EditarComponent  {
+export class EditarComponent {
 
-  listaDeMontadoras: Array<any>;
+ 
   title: string = 'Editar carro';
   idAtual: number;
-  carroEditado: any;
+  carro: Object;
   idEditar: number;
-  carroAtual: Array<any>;
+  montadoras: Observable<any>
 
   constructor(public listagemService: ListagemService, public cadastroService: CadastroService, public router: ActivatedRoute, public rota: Router) {
-   
+
   }
 
-  // ngOnInit() {
-  //   this.router.params.subscribe(params => {
-  //     this.idEditar = +params['id'];
-  //   });
+  ngOnInit() {
+    this.montadoras = this.cadastroService.getMontadoras();
+      this.carro = this.listagemService.listaDeCarros['id'];
+    }
 
-  //   for (let k in this.carroAtual) {
-  //     if (this.carroAtual[k].id == this.idEditar) {
-  //       this.carroEditado = this.carroAtual[k]
+  salvarEdicao(carro) {
+    this.listagemService.editVeiculo(carro).subscribe(
+      data => {
 
-  //     }
-  //   }
-
-  // }
-  // salvarEdicao() {
-    
-  // }
+        this.listagemService.getVeiculos();
+        return true;
+      },
+      error => {
+        console.error("Error saving food!");
+        return Observable.throw(error);
+      }
+    );
+  }
 }
