@@ -13,31 +13,31 @@ export class EditarComponent {
 
  
   title: string = 'Editar carro';
-  idAtual: number;
-  carro: Object;
+  carro: CarroModel = new CarroModel();
   idEditar: number;
   montadoras: Observable<any>
+  carroAtual: CarroModel;
 
-  constructor(public listagemService: ListagemService, public cadastroService: CadastroService, public router: ActivatedRoute, public rota: Router) {
+  constructor(public listagemService: ListagemService,
+     public cadastroService: CadastroService,
+      public router: ActivatedRoute, 
+      public rota: Router) {
 
   }
 
   ngOnInit() {
     this.montadoras = this.cadastroService.getMontadoras();
-      this.carro = this.listagemService.listaDeCarros['id'];
-    }
+   
 
-  salvarEdicao(carro) {
-    this.listagemService.editVeiculo(carro).subscribe(
-      data => {
-
-        this.listagemService.getVeiculos();
-        return true;
-      },
-      error => {
-        console.error("Error saving food!");
-        return Observable.throw(error);
-      }
-    );
   }
+      
+
+  salvarEdicao(carroAtual){
+    // console.log(this.listagemService.edicaoConfirm)
+    this.listagemService.editVeiculo(carroAtual)
+      .subscribe(
+      dados => 
+        this.rota.navigate(['/lista-de-veiculos']));
+      
+    }
 }

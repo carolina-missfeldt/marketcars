@@ -14,7 +14,7 @@ export class ListagemService {
 
   idAtual: number;
   id: number;
-  edicaoConfirm: any = {}
+  edicaoConfirmada: any = {}
   listaDeCarros: CarroModel[];
   constructor(private http: Http, private zone: NgZone) { }
 
@@ -25,10 +25,10 @@ export class ListagemService {
   }
 
   deletVeiculo(): Observable<Response> {
-    return this.http.delete(`${URL_API}/veiculos/${this.idAtual}`)
+    return this.http.delete(`${URL_API}/veiculos/${this.id}`)
   }
 
-  editVeiculo(carro: CarroModel): Observable<Response>{
+  editVeiculo(carro): Observable<Response>{
     var headers = new Headers();
     headers.append("Content-Type", 'application/json');
     return this.http.put(`${URL_API}/veiculos/editar/${this.idAtual}`,JSON.stringify(carro))

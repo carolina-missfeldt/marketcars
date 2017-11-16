@@ -85,20 +85,6 @@
       "nome": "Fusca",
       "preco": "6000.00",
       "unicoDono": "sim"
-    },
-    {
-      "montadora": {
-        "id": 1090,
-        "nome": "Citroen"
-      },
-      "anoFabricacao": "2004",
-      "condicao": "Usado",
-      "dataCadastro": "2017-11-16T10:50:36.363Z",
-      "id": 3,
-      "imagem": "http://bit.ly/2yYJ5Fb",
-      "nome": "Charger",
-      "preco": "7000.00",
-      "unicoDono": "sim"
     }
   ]
 }

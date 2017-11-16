@@ -32,8 +32,8 @@ export class CarroComponent implements OnInit {
   }
 
   apagarCarro(carro) {
-    this.listagemService.idAtual = this.carro.id;
-    alert(`Você irá excluir o ítem ' + ${this.carro.id}, nome:  ${this.carro.nome}`)
+    this.listagemService.id = this.carro.id;
+    alert(`Você irá excluir o ítem ${this.carro.id}, nome:  ${this.carro.nome}`)
     this.listagemService.deletVeiculo()
       .subscribe(veiculos => this.listagemService.getVeiculos()),
         this.listagemService.reloadPage();
