@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable, NgZone } from '@angular/core';
 import { Http, Response, RequestOptions } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
@@ -16,7 +16,7 @@ export class ListagemService {
   id: number;
   edicaoConfirm: any = {}
   listaDeCarros: CarroModel[];
-  constructor(private http: Http) { }
+  constructor(private http: Http, private zone: NgZone) { }
 
   getVeiculos(): Observable <CarroModel[]> {
     return this.http.get(`${URL_API}/veiculos`)
@@ -33,4 +33,7 @@ export class ListagemService {
   }
 
 
+  reloadPage() { // click handler or similar
+    window.location.reload();
+  }
 }

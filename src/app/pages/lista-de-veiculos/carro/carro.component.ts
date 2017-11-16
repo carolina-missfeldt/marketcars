@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, NgZone } from '@angular/core';
 import { NgClass } from '@angular/common';
 import { CurrencyPipe } from '@angular/common';
 import { DatePipe } from '@angular/common';
@@ -36,7 +36,7 @@ export class CarroComponent implements OnInit {
     alert(`Você irá excluir o ítem ' + ${this.carro.id}, nome:  ${this.carro.nome}`)
     this.listagemService.deletVeiculo()
       .subscribe(veiculos => this.listagemService.getVeiculos()),
-      window.location.reload();
+        this.listagemService.reloadPage();
     }
 
 }

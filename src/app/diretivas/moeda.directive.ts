@@ -7,6 +7,7 @@ import { NgModel, Validator } from '@angular/forms';
 })
 export class MoedaDirective {
   @Input() valorDigitado: string;
+  valorEmBranco;
   constructor( @Optional() private model: NgModel,
     private evento: ElementRef) { }
 
@@ -14,6 +15,7 @@ export class MoedaDirective {
   @HostListener('mouseenter')
   mouseEnter() {
     this.valorDigitado= undefined;
+    this.model.valueAccessor.writeValue('');
   }
 
   @HostListener('keyup')
@@ -29,6 +31,7 @@ export class MoedaDirective {
     this.model.viewToModelUpdate(valorValido);
 
   }
+
 
 
   checaValor(valorDigitado) {

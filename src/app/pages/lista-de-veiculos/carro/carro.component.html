@@ -8,15 +8,15 @@
  
         <h2 class="nome-do-carro">{{ carro?.nome | uppercase}}</h2>
         <div class="ui-g atributos">
-            <div class="ui-g-12 ui-md-6 ui-lg-4">
+            <div class="ui-g-12 ui-sm-12 ui-md-4 ui-lg-4">
                 <h3>Ano</h3>
                 <p>{{carro?.anoFabricacao }}</p>
             </div>
-            <div class="ui-g-12 ui-md-6 ui-lg-4">
+            <div class="ui-g-12 ui-sm-12 ui-md-6 ui-lg-4">
                 <h3>Fabricante</h3>
                 <p>{{carro?.montadora.nome}}</p>
             </div>
-            <div class="ui-g-12 ui-md-6 ui-lg-4">
+            <div class="ui-g-12 ui-sm-12 ui-md-4 ui-lg-4">
                 <h3>Único dono?</h3>
                 <p *ngIf="carro.unicoDono">Sim</p>
                 <p *ngIf="!carro.unicoDono">Não</p>

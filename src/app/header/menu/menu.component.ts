@@ -6,7 +6,7 @@ import { MenuItem } from 'primeng/primeng';
   selector: 'app-menu',
   template: `
     <p-sidebar [(visible)]="display" position="right">
-         <p-slideMenu  [model]="items"  [style]="estilos()"></p-slideMenu>
+        <p-slideMenu  [model]="items"  [style]="estilos()"></p-slideMenu>
     </p-sidebar>
     <button pButton type="button" (click)="display = true" icon="fa fa-bars" position="right" style="position: fixed; right: 0"></button>
   `
