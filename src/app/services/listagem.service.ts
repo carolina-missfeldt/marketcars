@@ -1,5 +1,5 @@
 import { Injectable, NgZone } from '@angular/core';
-import { Http, Response, RequestOptions } from '@angular/http';
+import { Http, Response, Headers } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
@@ -34,17 +34,22 @@ export class ListagemService {
     return this.http.delete(`${URL_API}/veiculos/${this.id}`)
   }
 
-  editVeiculo(carro): Observable<Response>{
-    var headers = new Headers();
-    headers.append("Content-Type", 'application/json');
+  editVeiculo(carro): Observable<CarroModel> {
+    console.log('carro editado:', carro.id);
 
-    return this.http.put(`${URL_API}/veiculos/${carro.id}`, JSON.stringify(carro))
+    var options = {
+      "headers": new Headers({
+        'Content-Type': 'application/json'
+      })
+    }
+
+    return this.http.put(`${URL_API}/veiculos/${carro.id}`, JSON.stringify(carro), options)
       .map(response=> response.json())
       .catch(ErrorMsg.handleError)
   }
 
-
   reloadPage() { // click handler or similar
     window.location.reload();
   }
+
 }

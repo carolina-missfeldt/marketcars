@@ -33,7 +33,7 @@ export class EditarComponent implements OnInit {
   }
       
   salvarEdicao(){
-    this.listagemService.editVeiculo(this.carroAtual).subscribe(dados => {
+    this.listagemService.editVeiculo(this.carroAtual).subscribe(() => {
       this.router.navigate(['/lista-de-veiculos'])
     });
   }
