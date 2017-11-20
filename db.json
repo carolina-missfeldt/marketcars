@@ -85,6 +85,20 @@
       "nome": "Gol",
       "preco": "5000.00",
       "unicoDono": "sim"
+    },
+    {
+      "montadora": {
+        "id": 1750,
+        "nome": "Toyota"
+      },
+      "anoFabricacao": "2002",
+      "condicao": "SemiNovo",
+      "dataCadastro": "2017-11-20T17:20:47.960Z",
+      "id": 4,
+      "imagem": "http://bit.ly/2luj8Kn",
+      "nome": "Monza",
+      "preco": "1290.00",
+      "unicoDono": "sim"
     }
   ]
 }
