@@ -9,7 +9,7 @@ import { Observable } from 'rxjs';
   selector: 'app-editar',
   templateUrl: './editar.component.html'
 })
-export class EditarComponent {
+export class EditarComponent implements OnInit {
  
   title: string = 'Editar carro';
 
@@ -21,17 +21,19 @@ export class EditarComponent {
      public cadastroService: CadastroService,
       public activatedRoute: ActivatedRoute, 
       public router: Router) {
-
+    
+    this.carroAtual = new CarroModel();
   }
 
   ngOnInit() {
     this.montadoras = this.cadastroService.getMontadoras();
     this.carroId = this.activatedRoute.snapshot.params['id'];
-    this.carroAtual = new CarroModel();
+
+    this.listagemService.getVeiculo(this.carroId).subscribe(carro => this.carroAtual = carro);
   }
       
-  salvarEdicao(carroAtual){
-    this.listagemService.editVeiculo(carroAtual).subscribe(dados => {
+  salvarEdicao(){
+    this.listagemService.editVeiculo(this.carroAtual).subscribe(dados => {
       this.router.navigate(['/lista-de-veiculos'])
     });
   }

@@ -24,6 +24,12 @@ export class ListagemService {
     .catch(ErrorMsg.handleError)
   }
 
+  getVeiculo(carroId: number): Observable<CarroModel> {
+    return this.http.get(`${URL_API}/veiculos/${carroId}`)
+      .map(response => response.json())
+      .catch(ErrorMsg.handleError);
+  }
+
   deletVeiculo(): Observable<Response> {
     return this.http.delete(`${URL_API}/veiculos/${this.id}`)
   }
@@ -31,9 +37,10 @@ export class ListagemService {
   editVeiculo(carro): Observable<Response>{
     var headers = new Headers();
     headers.append("Content-Type", 'application/json');
-    return this.http.put(`${URL_API}/veiculos/editar/${this.idAtual}`,JSON.stringify(carro))
-    .map(response=> response.json())
-    .catch(ErrorMsg.handleError)
+
+    return this.http.put(`${URL_API}/veiculos/${carro.id}`, JSON.stringify(carro))
+      .map(response=> response.json())
+      .catch(ErrorMsg.handleError)
   }
 
 

@@ -23,8 +23,8 @@
         <div id="fabricante">
             <h3>Fabricante</h3>
             <select name="fabricante">
-                <option value="{{carroAtual.montadora.nome}}" selected="true">{{carroAtual.montadora.nome}}</option>
-                <option option *ngFor="let m of montadoras" [ngValue]="m">{{montadora.nome }}</option>
+                <option value="{{carroAtual.montadora?.nome}}" selected="true">{{carroAtual.montadora?.nome}}</option>
+                <option option *ngFor="let m of montadoras | async" [ngValue]="m">{{m.nome}}</option>
             </select>
         </div>
         <div id="ano-de-fabricacao">
@@ -42,4 +42,3 @@
         </div>
     </form>
 </div>
-{{carroAtual | json}}
