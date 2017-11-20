@@ -2,7 +2,7 @@ import { CadastroService } from './../../../services/cadastro.service';
 import { Component, OnInit, Input } from '@angular/core';
 import { CarroModel } from '../../../models/carro-model';
 import { ListagemService } from '../../../services/listagem.service';
-import { Router, ActivatedRoute } from '@angular/router';
+import { Router, ActivatedRoute, Params } from '@angular/router';
 import { Observable } from 'rxjs';
 
 @Component({
@@ -10,34 +10,30 @@ import { Observable } from 'rxjs';
   templateUrl: './editar.component.html'
 })
 export class EditarComponent {
-
  
   title: string = 'Editar carro';
-  carro: CarroModel = new CarroModel();
-  idEditar: number;
-  montadoras: Observable<any>
+
+  carroId: number;
   carroAtual: CarroModel;
+  montadoras: Observable<any>
 
   constructor(public listagemService: ListagemService,
      public cadastroService: CadastroService,
-      public router: ActivatedRoute, 
-      public rota: Router) {
+      public activatedRoute: ActivatedRoute, 
+      public router: Router) {
 
   }
 
   ngOnInit() {
     this.montadoras = this.cadastroService.getMontadoras();
-   
-
+    this.carroId = this.activatedRoute.snapshot.params['id'];
+    this.carroAtual = new CarroModel();
   }
       
-
   salvarEdicao(carroAtual){
-    // console.log(this.listagemService.edicaoConfirm)
-    this.listagemService.editVeiculo(carroAtual)
-      .subscribe(
-      dados => 
-        this.rota.navigate(['/lista-de-veiculos']));
-      
-    }
+    this.listagemService.editVeiculo(carroAtual).subscribe(dados => {
+      this.router.navigate(['/lista-de-veiculos'])
+    });
+  }
+
 }
