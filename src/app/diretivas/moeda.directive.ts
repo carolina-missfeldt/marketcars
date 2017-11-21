@@ -12,8 +12,8 @@ export class MoedaDirective {
     private evento: ElementRef) { }
 
 
-  @HostListener('mouseenter')
-  mouseEnter() {
+  @HostListener('focus')
+  focus() {
     this.valorDigitado= undefined;
     this.model.valueAccessor.writeValue('');
   }
