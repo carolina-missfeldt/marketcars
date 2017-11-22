@@ -4,12 +4,12 @@
     <div class="ui-lg-4 ui-md-8 ui-sm-12">
         <p-panel header="Login">
 
-            <form novalidate #form="ngForm" class="login">
+            <form novalidate #loginForm="ngForm" class="login">
                 <div class="ui-inputgroup">
-                    <input  type="text" pInputText placeholder="Usuário" [(ngModel)]='usuario.nome' name="nome" required="required">
+                    <input  type="text" pInputText placeholder="Usuário" [(ngModel)]='usuario.nome' name="nome" required>
                 </div>
                 <div class="ui-inputgroup">
-                    <input  type="password" pInputText placeholder="Senha" [(ngModel)]='usuario.senha' name="senha" required="required">
+                    <input  type="password" pInputText placeholder="Senha" [(ngModel)]='usuario.senha' name="senha" required>
                 </div>
                 <button pButton type="button" id="entrar" (click)="entrar(this.usuario)" label="Login"></button>
             </form>

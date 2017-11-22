@@ -4,6 +4,7 @@ import { CarroModel } from '../../../models/carro-model';
 import { ListagemService } from '../../../services/listagem.service';
 import { Router, ActivatedRoute, Params } from '@angular/router';
 import { Observable } from 'rxjs';
+import  swal  from 'sweetalert2';
 
 @Component({
   selector: 'app-editar',
@@ -18,7 +19,7 @@ export class EditarComponent implements OnInit {
   montadoras: Observable<any>
 
   constructor(public listagemService: ListagemService,
-     public cadastroService: CadastroService,
+      public cadastroService: CadastroService,
       public activatedRoute: ActivatedRoute, 
       public router: Router) {
     
@@ -34,6 +35,11 @@ export class EditarComponent implements OnInit {
       
   salvarEdicao(){
     this.listagemService.editVeiculo(this.carroAtual).subscribe(() => {
+      swal({
+        title:'Edição concluída',
+        type: 'success',
+        customClass: 'modal'
+      });
       this.router.navigate(['/lista-de-veiculos'])
     });
   }

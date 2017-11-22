@@ -7,7 +7,7 @@ import { NgModel, Validator } from '@angular/forms';
 export class DataDirective {
   @Input() ano: number;
   constructor( @Optional() private model: NgModel,
-    private evento: ElementRef) { }
+    private element: ElementRef) { }
 
   @HostListener('mouseenter')
   mouseEnter() {
@@ -36,8 +36,10 @@ export class DataDirective {
   checaData(ano) {
     const maxDate = new Date().getFullYear().toString();
     if (this.model.value > maxDate || this.model.value < '1900') {
+      this.element.nativeElement.style.color = '#c0392b';
       this.model.valueAccessor.writeValue(`Digite um ano entre 1900 e ${maxDate}`);
     } else {
+      this.element.nativeElement.style.color = '#000';
       return this.model.value;
 
     }
