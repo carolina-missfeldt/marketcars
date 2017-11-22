@@ -5,7 +5,8 @@ import { CarroModel } from './../../models/carro-model';
 import { CadastroService } from '../../services/cadastro.service';
 import { ListagemService } from '../../services/listagem.service';
 import { ErrorMsg } from '../../app.error';
- 
+import swal from 'sweetalert2'
+
 
 
 @Component({
@@ -47,11 +48,14 @@ export class CadastroDeVeiculoComponent implements OnInit {
     this.novoCarro.dataCadastro = this.dataAtual;
     this.cadastroService.cadastrar(this.novoCarro)
     .subscribe( response => {
-      alert('cadastro realizado com sucesso');
-      console.log(JSON.stringify(this.novoCarro));
+      swal({
+        title:'Cadastro realizado com sucesso!',
+        type: 'success',
+        customClass: 'modal'
+      });
       this.resetNovoCarro();
     }, error => {
-      alert(`não foi possível cadastrar ${ErrorMsg}`)
+      swal('Não foi possível cadastrar');
     });
   }
 

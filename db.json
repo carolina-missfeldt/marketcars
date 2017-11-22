@@ -82,7 +82,7 @@
       "dataCadastro": "2017-11-20T15:43:01.085Z",
       "id": 3,
       "imagem": "http://bit.ly/2zj2GCY",
-      "nome": "Gol",
+      "nome": "",
       "preco": "5000.00",
       "unicoDono": "sim"
     },
@@ -98,6 +98,48 @@
       "imagem": "http://bit.ly/2luj8Kn",
       "nome": "Monza",
       "preco": "1290.00",
+      "unicoDono": "sim"
+    },
+    {
+      "montadora": {
+        "id": 122,
+        "nome": "Mercedes-Benz"
+      },
+      "anoFabricacao": "1990",
+      "condicao": "SemiNovo",
+      "dataCadastro": "2017-11-21T16:40:09.466Z",
+      "id": 5,
+      "imagem": "http://bit.ly/2luj8Kn",
+      "nome": "Feião",
+      "preco": "200000",
+      "unicoDono": "sim"
+    },
+    {
+      "montadora": {
+        "id": 12,
+        "nome": "Ford"
+      },
+      "anoFabricacao": "1994",
+      "condicao": "Novo",
+      "dataCadastro": "2017-11-22T11:48:41.223Z",
+      "id": 6,
+      "imagem": "http://bit.ly/2xAy1g9",
+      "nome": "Diablo",
+      "preco": "50000000",
+      "unicoDono": "sim"
+    },
+    {
+      "montadora": {
+        "id": 1264,
+        "nome": "Volkswagen"
+      },
+      "anoFabricacao": "2005",
+      "condicao": "Novo",
+      "dataCadastro": "2017-11-22T12:07:49.463Z",
+      "id": 7,
+      "imagem": "http://bit.ly/2zj2GCY",
+      "nome": "Gol",
+      "preco": "1000.00",
       "unicoDono": "sim"
     }
   ]

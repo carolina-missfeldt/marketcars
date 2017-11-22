@@ -4,7 +4,7 @@
     <div class="ui-lg-4 ui-md-8 ui-sm-12">
         <p-panel header="Login">
 
-            <form action="#" class="login">
+            <form novalidate #form="ngForm" class="login">
                 <div class="ui-inputgroup">
                     <input  type="text" pInputText placeholder="Usuário" [(ngModel)]='usuario.nome' name="nome" required="required">
                 </div>
@@ -13,12 +13,6 @@
                 </div>
                 <button pButton type="button" id="entrar" (click)="entrar(this.usuario)" label="Login"></button>
             </form>
-            <div *ngIf="error" class="msg-erro">
-                Usuario e senha nao conferem.
-            </div>
-            <div *ngIf="campoVazio" class="msg-erro">
-                Os campos não podem ficar em branco.
-            </div>
         </p-panel>
     </div>
     <div class="ui-lg-4 ui-md-2"></div>
