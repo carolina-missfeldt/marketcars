@@ -292,6 +292,7 @@ span {
 .modal h2 {
     background-color: transparent !important;
     font-family: Montserrat, sans-serif !important;
+    font-size: 100%;
 }
 
 @media screen and (max-width: 700px) {

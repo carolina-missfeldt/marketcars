@@ -85,20 +85,6 @@
       "nome": "Passat",
       "preco": "100000",
       "unicoDono": "sim"
-    },
-    {
-      "montadora": {
-        "id": 1090,
-        "nome": "Citroen"
-      },
-      "anoFabricacao": "2001",
-      "condicao": "Novo",
-      "dataCadastro": "2017-11-22T15:46:15.357Z",
-      "id": 3,
-      "imagem": "http://bit.ly/2zj2GCY",
-      "nome": "Thunderbird",
-      "preco": "1000.00",
-      "unicoDono": "sim"
     }
   ]
 }
