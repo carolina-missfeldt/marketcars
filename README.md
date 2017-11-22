@@ -1,7 +1,11 @@
 
 
 # Marketcars
-#Login:
+Instalar o json-server ( npm install -g json-server)  
+rodar: json-server --watch db.json
+rodar: ng serve 
+
+Login:
   usuário: admin
   senha: admin
 
