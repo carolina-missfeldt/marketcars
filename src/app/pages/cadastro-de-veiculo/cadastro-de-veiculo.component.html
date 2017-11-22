@@ -17,13 +17,13 @@
         <div id="nome-do-carro">
             <h3>Nome do carro</h3>
             <input type="text" [(ngModel)]="novoCarro.nome" name="carro"  placeholder="Fusca" required 
-            #carName="ngModel"
+            #carName="ngModel" autocomplete="off"
             [class.border-invalid]="carName.invalid && (carName.dirty || carName.touched)">
         </div>
         <div id="preco">
             <h3>Valor de venda</h3>
             <input type="text" name="preco" [(ngModel)]="novoCarro.preco" preco 
-            #carPrice="ngModel" minlength="1" placeholder="1000.00" 
+            #carPrice="ngModel" minlength="1" placeholder="1000.00" autocomplete="off"
             [class.border-invalid]="carPrice.invalid && (carPrice.dirty || carPrice.touched)">
         </div>
         <div id="fabricante">
@@ -37,7 +37,7 @@
             <h3>Ano de fabricação</h3>
             <input type="text"  name="ano" [(ngModel)]="novoCarro.anoFabricacao"
              placeholder="1990" required dataConvert  maxlength="4"
-             #carDate="ngModel"
+             #carDate="ngModel" autocomplete="off"
              [class.border-invalid]="carDate.invalid && (carDate.dirty || carDate.touched)">
         </div>
         <div id="dono">
