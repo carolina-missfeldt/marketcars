@@ -3,13 +3,13 @@
 # Marketcars
 Instalar o json-server ( npm install -g json-server)  
 rodar: json-server --watch db.json
-rodar: ng serve 
 
 Login:
   usuário: admin
   senha: admin
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.4.4.
+rodar: ng serve 
 
 ## Development server
 
