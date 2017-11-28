@@ -286,6 +286,21 @@ span {
     opacity: 0.8 !important;
 }
 
+/* page not found */
+.not-found {
+    text-align: center;
+    padding: 5em;
+}
+
+.not-found img {
+    width: 50%;
+}
+
+.not-found a {
+    border-bottom: 1px solid rgba(0,0,0,0.3);
+
+}
+
 
 /* swal */
 

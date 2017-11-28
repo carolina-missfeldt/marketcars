@@ -99,20 +99,6 @@
       "nome": "Fusca",
       "preco": "1000.00",
       "unicoDono": "sim"
-    },
-    {
-      "montadora": {
-        "id": 126,
-        "nome": "Fiat"
-      },
-      "anoFabricacao": "1990",
-      "condicao": "Novo",
-      "dataCadastro": "2017-11-27T18:27:07.511Z",
-      "id": 4,
-      "imagem": "http://bit.ly/2luj8Kn",
-      "nome": "Gol",
-      "preco": "1000.00",
-      "unicoDono": "não"
     }
   ]
 }

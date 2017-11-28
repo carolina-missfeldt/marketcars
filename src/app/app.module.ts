@@ -31,6 +31,7 @@ import { CadastroService } from './services/cadastro.service';
 import { DataDirective } from './diretivas/data.directive';
 import { MoedaDirective } from './diretivas/moeda.directive';
 import { FooterComponent } from './footer/footer.component';
+import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
 
 
 
@@ -48,7 +49,8 @@ import { FooterComponent } from './footer/footer.component';
     EditarComponent,
     DataDirective,
     MoedaDirective,
-    FooterComponent
+    FooterComponent,
+    PageNotFoundComponent
 
   ],
   imports: [
