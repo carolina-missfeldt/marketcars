@@ -74,8 +74,8 @@
     },
     {
       "montadora": {
-        "id": 121,
-        "nome": "Ferrari"
+        "id": 127,
+        "nome": "Renault"
       },
       "anoFabricacao": "2005",
       "condicao": "Novo",
@@ -84,20 +84,6 @@
       "imagem": "http://bit.ly/2yWWQGS",
       "nome": "Passat",
       "preco": "100000",
-      "unicoDono": "sim"
-    },
-    {
-      "montadora": {
-        "id": 1264,
-        "nome": "Volkswagen"
-      },
-      "anoFabricacao": "2000",
-      "condicao": "Novo",
-      "dataCadastro": "2017-11-22T19:00:40.283Z",
-      "id": 3,
-      "imagem": "http://bit.ly/2yYJ5Fb",
-      "nome": "Fusca",
-      "preco": "1000.00",
       "unicoDono": "sim"
     }
   ]

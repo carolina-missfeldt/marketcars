@@ -4,10 +4,10 @@ import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { HttpModule } from '@angular/http';
 import { AppRoutingModule } from './app-routing.module';
 import {LOCALE_ID} from '@angular/core';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 //modulos do prime ng
 import {SidebarModule} from 'primeng/primeng';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {ButtonModule} from 'primeng/primeng';
 import {SlideMenuModule,MenuItem} from 'primeng/primeng';
 import {PanelModule} from 'primeng/primeng';
@@ -63,7 +63,7 @@ import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.com
     PanelModule,
     HttpModule,
     FormsModule,
-    ConfirmDialogModule,
+    BrowserAnimationsModule,
     InputMaskModule,
     ReactiveFormsModule,
     RadioButtonModule
