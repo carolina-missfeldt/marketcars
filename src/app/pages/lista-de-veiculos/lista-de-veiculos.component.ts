@@ -12,10 +12,12 @@ import {FormBuilder, FormControl, FormGroup} from '@angular/forms'
   animations: [
     trigger('toggleSearch', [
       state('hidden', style({
-        opacity: 0
+        opacity: 0,
+        "width": "0"
       })),
       state('visible', style({
-        opacity: 1
+        opacity: 1,
+        "width":"90%",
       })),
       transition('* => *', animate('250ms 0s ease-in'))
     ])
@@ -23,15 +25,24 @@ import {FormBuilder, FormControl, FormGroup} from '@angular/forms'
 })
 export class ListaDeVeiculosComponent implements OnInit {
 
+  searchForm: FormGroup
+  searchControl: FormControl
+
   searchBarState = 'hidden';
   title: string = 'Veículos disponíveis';
   listaDeCarros: CarroModel[];
 
 
-  constructor(public listagemService: ListagemService) { }
+  constructor(public listagemService: ListagemService, private fb: FormBuilder) { }
 
   ngOnInit() {
+
     this.montaLista();
+
+    this.searchControl = this.fb.control('')
+    this.searchForm = this.fb.group({
+      searchControl: this.searchControl
+    })
   }
 
   montaLista() {
