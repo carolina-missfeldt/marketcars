@@ -47,8 +47,6 @@ export class ListaDeVeiculosComponent implements OnInit {
 
   ngOnInit() {
 
-    // this.montaLista();
-    console.log(this.listaDeCarros)
     this.searchControl = this.fb.control('')
     this.searchForm = this.fb.group({
       searchControl: this.searchControl
@@ -63,7 +61,7 @@ export class ListaDeVeiculosComponent implements OnInit {
         .catch(error=> Observable.from([])))
     .subscribe(veiculos => this.listaDeCarros = veiculos)
     this.montaLista()
-      console.log(this.listaDeCarros)
+
       }
  
 
