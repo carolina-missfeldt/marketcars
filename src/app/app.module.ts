@@ -6,13 +6,12 @@ import { AppRoutingModule } from './app-routing.module';
 import {LOCALE_ID} from '@angular/core';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
+
 //modulos do prime ng
 import {SidebarModule} from 'primeng/primeng';
 import {ButtonModule} from 'primeng/primeng';
 import {SlideMenuModule,MenuItem} from 'primeng/primeng';
 import {PanelModule} from 'primeng/primeng';
-import {ConfirmDialogModule,ConfirmationService} from 'primeng/primeng';
-import {InputMaskModule} from 'primeng/primeng';
 import {RadioButtonModule} from 'primeng/primeng';
 // componentes do projeto
 import { AppComponent } from './app.component';
@@ -32,8 +31,6 @@ import { DataDirective } from './diretivas/data.directive';
 import { MoedaDirective } from './diretivas/moeda.directive';
 import { FooterComponent } from './footer/footer.component';
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
-
-
 
 
 @NgModule({
@@ -64,9 +61,9 @@ import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.com
     HttpModule,
     FormsModule,
     BrowserAnimationsModule,
-    InputMaskModule,
     ReactiveFormsModule,
-    RadioButtonModule
+    RadioButtonModule,
+
   ],
   schemas: [
     CUSTOM_ELEMENTS_SCHEMA
@@ -75,7 +72,6 @@ import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.com
     LoginService,
     ListagemService,
     CadastroService,
-    ConfirmationService,
     {provide: LOCALE_ID, useValue: 'pt-BR'}
   ],
   bootstrap: [AppComponent]
