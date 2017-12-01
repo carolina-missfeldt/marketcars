@@ -1,3 +1,4 @@
+
 import { Component, OnInit, Input } from '@angular/core';
 import { CarroModel } from './../../models/carro-model';
 import { ListagemService } from '../../services/listagem.service';
@@ -11,6 +12,7 @@ import 'rxjs/add/operator/distinctUntilChanged'
 import 'rxjs/add/operator/catch'
 import 'rxjs/add/observable/from'
 import {Observable} from 'rxjs/Observable'
+import  swal from 'sweetalert2';
 
 
 
@@ -46,7 +48,7 @@ export class ListaDeVeiculosComponent implements OnInit {
   ngOnInit() {
 
     // this.montaLista();
-
+    console.log(this.listaDeCarros)
     this.searchControl = this.fb.control('')
     this.searchForm = this.fb.group({
       searchControl: this.searchControl
@@ -58,9 +60,10 @@ export class ListaDeVeiculosComponent implements OnInit {
     .switchMap(searchTerm =>
       this.listagemService
         .getVeiculos(searchTerm)
-        .catch(error=>Observable.from([])))
-    .subscribe(veiculos => this.listaDeCarros = veiculos);
-      this.montaLista()
+        .catch(error=> Observable.from([])))
+    .subscribe(veiculos => this.listaDeCarros = veiculos)
+    this.montaLista()
+      console.log(this.listaDeCarros)
       }
  
 

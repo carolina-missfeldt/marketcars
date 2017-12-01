@@ -18,7 +18,7 @@ export class ListagemService {
   idAtual: number;
   id: number;
   edicaoConfirmada: any = {}
-  listaDeCarros: CarroModel[];
+  public listaDeCarros: CarroModel[];
   constructor(private http: Http, private zone: NgZone) { }
 
   getVeiculos(search?: string): Observable <CarroModel[]> {

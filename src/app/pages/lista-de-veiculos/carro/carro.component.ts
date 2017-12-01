@@ -71,9 +71,4 @@ export class CarroComponent implements OnInit {
     });
   }
 
-  montaLista() {
-    this.listagemService.getVeiculos()
-    .subscribe(veiculos => this.listaDeCarros = veiculos)
-
-  }
 }

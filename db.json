@@ -74,58 +74,30 @@
     },
     {
       "montadora": {
-        "id": 121,
-        "nome": "Ferrari"
-      },
-      "anoFabricacao": "2005",
-      "condicao": "Novo",
-      "dataCadastro": "2017-11-22T15:43:36.370Z",
-      "id": 2,
-      "imagem": "http://bit.ly/2yWWQGS",
-      "nome": "Passat",
-      "preco": "100000",
-      "unicoDono": "sim"
-    },
-    {
-      "montadora": {
-        "id": 1290,
-        "nome": "Honda"
-      },
-      "anoFabricacao": "2000",
-      "condicao": "SemiNovo",
-      "dataCadastro": "2017-12-01T10:53:28.990Z",
-      "id": 3,
-      "imagem": "http://bit.ly/2gXi54x",
-      "nome": "Legend",
-      "preco": "2000.00",
-      "unicoDono": "sim"
-    },
-    {
-      "montadora": {
-        "id": 1123,
-        "nome": "Hyundai"
+        "id": 12,
+        "nome": "Ford"
       },
       "anoFabricacao": "1990",
       "condicao": "Usado",
-      "dataCadastro": "2017-12-01T10:53:28.990Z",
-      "id": 4,
+      "dataCadastro": "2017-12-01T11:49:25.355Z",
+      "id": 2,
       "imagem": "http://bit.ly/2xyPm8U",
-      "nome": "Spider",
-      "preco": "30000.00",
+      "nome": "Town Car",
+      "preco": "20000",
       "unicoDono": "não"
     },
     {
       "montadora": {
-        "id": 1090,
-        "nome": "Citroen"
+        "id": 125,
+        "nome": "Mitsubishi"
       },
-      "anoFabricacao": "2005",
-      "condicao": "SemiNovo",
-      "dataCadastro": "2017-12-01T10:53:28.990Z",
-      "id": 5,
-      "imagem": "http://bit.ly/2yWWQGS",
-      "nome": "Crown Victoria",
-      "preco": "500000",
+      "anoFabricacao": "2000",
+      "condicao": "Novo",
+      "dataCadastro": "2017-12-01T11:49:25.355Z",
+      "id": 3,
+      "imagem": "http://bit.ly/2xyPm8U",
+      "nome": "Mountaineer",
+      "preco": "4000000",
       "unicoDono": "sim"
     }
   ]
