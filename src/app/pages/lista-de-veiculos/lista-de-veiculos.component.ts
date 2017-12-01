@@ -45,34 +45,36 @@ export class ListaDeVeiculosComponent implements OnInit {
 
   ngOnInit() {
 
-    this.montaLista();
+    // this.montaLista();
 
     this.searchControl = this.fb.control('')
     this.searchForm = this.fb.group({
       searchControl: this.searchControl
     })
-  }
+
+    this.searchControl.valueChanges
+    .debounceTime(500)
+    .distinctUntilChanged()
+    .switchMap(searchTerm =>
+      this.listagemService
+        .getVeiculos(searchTerm)
+        .catch(error=>Observable.from([])))
+    .subscribe(veiculos => this.listaDeCarros = veiculos);
+      this.montaLista()
+      }
+ 
 
 
-    // this.searchControl.valueChanges
-    // .debounceTime(500)
-    // .distinctUntilChanged()
-    // .switchMap(searchTerm =>
-    //   this.listagemService
-    //     .getVeiculos(searchTerm)
-    //     .catch(error=>Observable.from([])))
-    // .subscribe(veiculos => this.listaDeCarros = veiculos)
-    //   this.montaLista()
-    //   }
+
 
   montaLista() {
     this.listagemService.getVeiculos()
-    .subscribe(veiculos => this.listaDeCarros = veiculos)
+    .subscribe(veiculos => this.listaDeCarros = veiculos);
 
   }
 
   toggleSearch(){
-    this.searchBarState = this.searchBarState === 'hidden' ? 'visible' : 'hidden'
+    this.searchBarState = this.searchBarState === 'hidden' ? 'visible' : 'hidden';
   }
 
 
