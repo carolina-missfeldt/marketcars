@@ -59,6 +59,7 @@ export class CarroComponent implements OnInit {
             })
             this.listagemService.reloadPage()
           });
+          
         }
         }, (dismiss) => {
           if (dismiss === 'cancel') {
