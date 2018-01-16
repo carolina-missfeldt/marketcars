@@ -1,8 +1,22 @@
 <app-menu></app-menu>
 <app-logo></app-logo>
+<div class="ui-md-12 search-box">
+    <div class="search-form">
+            <a (click)="toggleSearch()" class="search-link">
+                <i class="fa fa-search"></i>
+            </a>
+    
+        <form [formGroup]="searchForm">
+            <div class="form-group">
+                <input type="text" #iptSearch formControlName="searchControl" [@toggleSearch]="searchBarState"
+                    class="input-search" placeholder="Encontre um carro">
+            </div>
+        </form>
+    </div>
+</div>
 <h1 class="title">{{title}}</h1>
 <div class="ui-g" class="lista-de-carros">
-    <div class="ui-g-12 ui-sm-12 ui-md-6 ui-lg-4 ui-xl-4" style="margin-bottom:0; heigth: auto" *ngFor="let carro of listaDeCarros">
+    <div class="ui-g-12 ui-sm-12 ui-md-6 ui-lg-4 ui-xl-4" style="margin-bottom:0;" *ngFor="let carro of listaDeCarros">
         <app-carro [carro]="carro"></app-carro>
     </div>
 </div>

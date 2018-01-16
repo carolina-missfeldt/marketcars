@@ -4,15 +4,14 @@ import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { HttpModule } from '@angular/http';
 import { AppRoutingModule } from './app-routing.module';
 import {LOCALE_ID} from '@angular/core';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+
 
 //modulos do prime ng
-import {SidebarModule} from 'primeng/primeng';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {SidebarModule, ConfirmationService} from 'primeng/primeng';
 import {ButtonModule} from 'primeng/primeng';
 import {SlideMenuModule,MenuItem} from 'primeng/primeng';
 import {PanelModule} from 'primeng/primeng';
-import {ConfirmDialogModule,ConfirmationService} from 'primeng/primeng';
-import {InputMaskModule} from 'primeng/primeng';
 import {RadioButtonModule} from 'primeng/primeng';
 // componentes do projeto
 import { AppComponent } from './app.component';
@@ -31,8 +30,7 @@ import { CadastroService } from './services/cadastro.service';
 import { DataDirective } from './diretivas/data.directive';
 import { MoedaDirective } from './diretivas/moeda.directive';
 import { FooterComponent } from './footer/footer.component';
-
-
+import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
 
 
 @NgModule({
@@ -48,7 +46,8 @@ import { FooterComponent } from './footer/footer.component';
     EditarComponent,
     DataDirective,
     MoedaDirective,
-    FooterComponent
+    FooterComponent,
+    PageNotFoundComponent
 
   ],
   imports: [
@@ -61,10 +60,10 @@ import { FooterComponent } from './footer/footer.component';
     PanelModule,
     HttpModule,
     FormsModule,
-    ConfirmDialogModule,
-    InputMaskModule,
+    BrowserAnimationsModule,
     ReactiveFormsModule,
-    RadioButtonModule
+    RadioButtonModule,
+
   ],
   schemas: [
     CUSTOM_ELEMENTS_SCHEMA

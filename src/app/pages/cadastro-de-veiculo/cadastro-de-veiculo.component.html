@@ -30,6 +30,7 @@
             <h3>Fabricante</h3>
             <select name="fabricante" required [(ngModel)]="novoCarro.montadora" #montadora="ngModel"
             [class.border-invalid]="montadora.invalid && (montadora.dirty || montadora.touched)">
+                <option selected="selected" value="0">--Selecione--</option>
                 <option *ngFor="let montadora of montadoras | async" [ngValue]="montadora">{{ montadora.nome }}</option>
             </select>
         </div>

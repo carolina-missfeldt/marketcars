@@ -28,11 +28,9 @@ export class LoginComponent implements OnInit {
     }, error => {
         console.log(error._body);
     })
-    console.log(this.usuario);
   }
 
   entrar() {
-      console.log(this.usuario);
       if(this.usuario.nome == null || this.usuario.senha == null){
         swal({title:'Preencha os campos', type: 'warning', customClass: 'modal'});
       }

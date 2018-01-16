@@ -80,8 +80,6 @@ export class CadastroDeVeiculoComponent implements OnInit {
       const indiceUltimoCarro = response.length - 1;
       this.novoCarro.id = response[indiceUltimoCarro].id + 1;
 
-      console.log(`ID do novo carro: ${this.novoCarro.id}`);
-
     }, error => {
 
     });

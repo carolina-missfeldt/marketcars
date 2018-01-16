@@ -3,6 +3,9 @@ import { Http, Response, Headers } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
+
+import 'rxjs/add/operator/map'
+import 'rxjs/add/operator/catch'
 //services
 import { ErrorMsg } from '../app.error';
 import { URL_API } from './../app.api';
@@ -15,11 +18,11 @@ export class ListagemService {
   idAtual: number;
   id: number;
   edicaoConfirmada: any = {}
-  listaDeCarros: CarroModel[];
+  public listaDeCarros: CarroModel[];
   constructor(private http: Http, private zone: NgZone) { }
 
-  getVeiculos(): Observable <CarroModel[]> {
-    return this.http.get(`${URL_API}/veiculos`)
+  getVeiculos(search?: string): Observable <CarroModel[]> {
+    return this.http.get(`${URL_API}/veiculos`, {params: {q: search}})
     .map(response=> response.json())
     .catch(ErrorMsg.handleError)
   }
