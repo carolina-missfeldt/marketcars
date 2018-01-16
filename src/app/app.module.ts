@@ -74,7 +74,7 @@ import { FooterComponent } from './footer/footer.component';
     ListagemService,
     CadastroService,
     ConfirmationService,
-    {provide: LOCALE_ID, useValue: 'pt-BR'}
+    {provide: LOCALE_ID, useValue: 'br' }
   ],
   bootstrap: [AppComponent]
 })

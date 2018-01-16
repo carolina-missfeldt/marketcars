@@ -74,20 +74,6 @@
     },
     {
       "montadora": {
-        "id": 122,
-        "nome": "Mercedes-Benz"
-      },
-      "anoFabricacao": "2000",
-      "condicao": "Novo",
-      "dataCadastro": "2017-11-22T15:43:36.370Z",
-      "id": 2,
-      "imagem": "http://bit.ly/2yWWQGS",
-      "nome": "Passat",
-      "preco": "100000",
-      "unicoDono": "sim"
-    },
-    {
-      "montadora": {
         "id": 1264,
         "nome": "Volkswagen"
       },

@@ -3,7 +3,7 @@
         <div class="box-img">
             <img src="{{ carro.imagem }}" alt="{{ carro.nome }}">
             <span class="condicao-do-carro" [ngClass]="cores()">{{ carro?.condicao }}</span>
-            <span class="preco-do-carro">{{ carro?.preco | currency:'BRL':true }}</span>
+            <span class="preco-do-carro">{{ carro?.preco | currency:'$':'symbol':'4.2-2':'br' }}</span>
         </div>
  
         <h2 class="nome-do-carro">{{ carro?.nome | uppercase}}</h2>
